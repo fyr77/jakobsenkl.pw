@@ -1,0 +1,65 @@
+body{ 
+    overflow: hidden;
+    font-family: 'Noto Sans', sans-serif;
+    }
+@media screen and (min-width: 1000px){
+    .main-container{ 
+        padding-top: 10em;
+        padding-bottom: 10em;
+        padding-left: 5em;
+        width: 62%;
+        background: white;
+        border-radius: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -1%;
+    }
+    img{
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        left: 16%;
+        transform: translate(-50%, -50%);
+    }
+}   
+@media screen and (max-width: 999px){
+    .main-container{
+        padding-top: 1em;
+        padding-bottom: 2em;
+        padding-left: 4em;
+        padding-right: 4em;
+        height: 68%;
+        background: white;
+        margin: 0;
+        border-radius: 15px 15px 0 0;
+        position: absolute;
+        left: 0px;
+        bottom: 0%;
+    }
+    img{
+        height: 25%;
+        position: absolute;
+        top: 0%;
+    }
+}
+@media screen and (max-height: 600px){
+    .main-container{
+        padding-top: 1em;
+        padding-bottom: 2em;
+        padding-left: 4em;
+        padding-right: 4em;
+        height: 60%;
+        background: white;
+        margin: 0;
+        border-radius: 15px 15px 0 0;
+        position: absolute;
+        left: 0px;
+        bottom: 0%;
+    }
+    .img{
+        height: 25%;
+        position: absolute;
+        top: 0%;
+    }
+}
