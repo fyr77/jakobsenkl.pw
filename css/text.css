@@ -10,5 +10,23 @@ a {
   -o-transition: color .5s linear;
   transition: color .5s linear;
 }
- 
 a:hover { color: #d08770; }
+
+@media screen and (min-width: 1000px){
+    ul li { 
+        display: inline; 
+        position: relative;
+        left: -41px;
+    }
+    li~li {
+        border-left: 1px solid #000000;
+        padding-left: 7px;
+    }
+}
+@media screen and (max-width: 999px){
+    ul li { 
+        display:block;
+        position: relative;
+        left: -41px;
+    }
+}
