@@ -1,0 +1,12 @@
+p,h1,h2,h3,h4,h5,h6,ul,li,ol {
+    font-family: Verdana, Geneva, sans-serif;
+}
+.spotify:hover { 
+    color: #1bd75f;
+    text-decoration: none;
+}
+.aplmusic:hover { 
+    color: #f75c74;
+    text-decoration: none;
+}
+a {text-decoration: none;}
