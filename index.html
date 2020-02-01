@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jakob Senkl</title>
 <link rel="stylesheet" href="css/box.css">
-<link rel="stylesheet" href="css/gradient.css">
 <link rel="stylesheet" href="css/text.css"> 
 <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
@@ -17,6 +16,35 @@
 <meta name="msapplication-TileColor" content="#356cc6">
 <meta name="msapplication-config" content="img/fav/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+<script>
+    function getStylesheet() {
+        var d = new Date();
+        var month = d.getMonth() + 1;
+        var season = null;
+        
+        if (month == 12 || month < 3) {
+            season = "winter";
+        }
+        else if (month >= 3 && month < 6) {
+            season = "spring";
+        }
+        else if (month >= 6 && month < 9) {
+            season = "summer";
+        }
+        else if (month >= 9 && month < 12) {
+            season = "autumn";
+        }
+        
+        var sts = document.createElement("link");
+        sts.rel = "stylesheet";
+        sts.href = `css/gradient_${season}.css`;
+        document.getElementsByTagName("head")[0].appendChild(sts);
+    }
+
+    getStylesheet();
+</script>
+
+<noscript><link href="css/gradient_main.css" rel="stylesheet"></noscript>
 </head>
 <body>
     <img src="img/white_noback.svg"/>
