@@ -40,7 +40,15 @@
         sts.href = `css/gradient_${season}.css`;
         document.getElementsByTagName("head")[0].appendChild(sts);
     }
-
+    function toggleProjects() {
+        var maincont = document.getElementsByClassName("main-container")[0];
+        if (maincont.classList.contains("active")) {
+            maincont.classList.remove("active");
+        }
+        else {
+            maincont.classList.add("active");
+        }
+    }
     getStylesheet();
 </script>
 
@@ -48,15 +56,25 @@
 </head>
 <body>
     <img src="img/white_noback.svg"/>
-    <div class="main-container">
+    <div class="container main-container">
         <h1>Hi! I'm Jakob.</h1>
         <p>I make things on the internet - programming, photography and other projects</p>
         <ul>
+            <li><a href="javascript:toggleProjects();">Projects</a></li>
             <li><a href="https://github.com/fyr77/" target="_blank">GitHub</a></li>
             <li><a href="https://t.me/fyr77" target="_blank">Telegram</a></li>
             <li><a href="https://twitter.com/fyrwit77/" target="_blank">Twitter</a></li>
             <li><a href="https://instagram.com/jakobnotjakob" target="_blank">Instagram</a></li>
             <li><a href="https://lensdump.com/notjakob" target="_blank">Photos</a></li>
+        </ul>
+    </div>
+    <div class="container projects-container">
+        <h1>Projects</h1>
+        <ul>
+            <li><a href="javascript:toggleProjects();">notjakob.com</a></li>
+            <li><a href="https://github.com/fyr77/EnvyUpdate" target="_blank">EnvyUpdate</a></li>
+            <li><a href="https://twitter.com/fyrwit77/status/1295276788910891008" target="_blank">Wii-CRT</a></li>
+            <li><a href="https://twitter.com/fyrwit77/status/1298357286323314688" target="_blank">app/tool recommendations</a></li>
         </ul>
     </div>
 </body>

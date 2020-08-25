@@ -1,19 +1,38 @@
 body{ 
     overflow: hidden;
-    font-family: 'Noto Sans', sans-serif;
     }
+.projects-container{
+        z-index: 1;
+}
+.main-container{ 
+        background: white;
+        z-index: 10;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        transition-duration: 1s;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        -o-transition-property: -o-transform;
+        transition-property: transform;
+    }
+
 @media screen and (min-width: 1000px){
-    .main-container{ 
+    .container{ 
         padding-top: 10em;
         padding-bottom: 10em;
         padding-left: 5em;
         width: 62%;
-        background: white;
         border-radius: 15px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         right: -1%;
+    }
+    .main-container.active{
+        -webkit-transform: translate(100%,-50%);
+        -ms-transform: translate(100%,-50%);
+        transform: translate(100%,-50%);
     }
     img{
         width: 25%;
@@ -24,17 +43,21 @@ body{
     }
 }
 @media screen and (min-width: 700px) and (max-width: 999px){
-    .main-container{ 
+    .container{
         padding-top: 10em;
         padding-bottom: 10em;
         padding-left: 5em;
         width: 62%;
-        background: white;
         border-radius: 15px 0 0 15px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         right: -1%;
+    }
+    .main-container.active{
+        -webkit-transform: translate(100%,-50%);
+        -ms-transform: translate(100%,-50%);
+        transform: translate(100%,-50%);
     }
     img{
         width: 25%;
@@ -45,18 +68,22 @@ body{
     }
 }
 @media screen and (max-width: 699px){
-    .main-container{
+    .container{
         padding-top: 1em;
         padding-bottom: 2em;
         padding-left: 4em;
         padding-right: 4em;
         height: 68%;
-        background: white;
         margin: 0;
         border-radius: 15px 15px 0 0;
         position: absolute;
         left: 0px;
         bottom: 0%;
+    }
+    .main-container.active{
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
     }
     img{
         height: 25%;
@@ -69,18 +96,22 @@ body{
     }
 }
 @media screen and (max-height: 600px) and (max-width: 699px){
-    .main-container{
+    .container{
         padding-top: 1em;
         padding-bottom: 2em;
         padding-left: 4em;
         padding-right: 4em;
         height: 60%;
-        background: white;
         margin: 0;
         border-radius: 15px 15px 0 0;
         position: absolute;
         left: 0px;
         bottom: 0%;
+    }
+    .main-container.active{
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
     }
     .img{
         height: 25%;
