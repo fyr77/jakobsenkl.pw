@@ -23,11 +23,11 @@ body{
         padding-bottom: 10em;
         padding-left: 5em;
         width: 62%;
-        border-radius: 15px;
+        border-radius: 15px 0 0 15px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: -1%;
+        right: 0;
     }
     .main-container.active{
         -webkit-transform: translate(100%,-50%);
@@ -52,7 +52,7 @@ body{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: -1%;
+        right: 0;
     }
     .main-container.active{
         -webkit-transform: translate(100%,-50%);
