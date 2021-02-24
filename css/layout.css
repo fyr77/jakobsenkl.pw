@@ -1,0 +1,144 @@
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+h3 {
+    position: relative;
+    z-index: 10;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3::before {
+    content: "";
+    position: absolute;
+    left: 51%;
+    bottom: 0px;
+    width: 7rem;
+    height: 1rem;
+    transform: skew(-12deg) translateX(-50%);
+    background: rgba(238, 111, 87, 0.5);
+    z-index: -1;
+}
+
+body {
+    color: white;
+}
+
+.card,
+.footer {
+    margin: auto;
+    width: 70vw;
+    padding: 1vmin;
+}
+
+.card {
+    border-radius: 10px 10px 0px 0px;
+    background: #333333;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 5vh;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    z-index: -1;
+}
+
+.footer {
+    border-radius: 0px 0px 10px 10px;
+    background-color: #212121;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #7e9abc;
+    text-decoration: none;
+    -webkit-transition: color .5s linear;
+    -moz-transition: color .5s linear;
+    -ms-transition: color .5s linear;
+    -o-transition: color .5s linear;
+    transition: color .5s linear;
+}
+
+.footer a:hover {
+    color: #d08770;
+}
+
+.card .inner_container {
+    margin: 3%;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        margin-top: -5vh;
+        opacity: 0
+    }
+
+    to {
+        margin-top: 5vh;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        margin-top: -5vh;
+        opacity: 0
+    }
+
+    to {
+        margin-top: 5vh;
+        opacity: 1
+    }
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12vmax;
+}
+
+.container_proj {
+    margin: 3%;
+    background-color: #565656;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+@media screen and (min-width: 700px) and (max-width: 999px) {
+
+    .card,
+    .footer {
+        width: 80vw;
+    }
+
+    .center {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 699px) {
+
+    .card,
+    .footer {
+        width: 90vw;
+    }
+
+    .center {
+        width: 25%;
+    }
+}
